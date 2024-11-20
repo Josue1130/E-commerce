@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuillaStore</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        /* Video background styles */
+        .video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .header-content {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        .header-content h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .header-content p {
+            font-size: 1.5em;
+            margin: 10px 0 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .header-content button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Section styles */
+        .preferences {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .preferences h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            width: 200px;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .category img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .category p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        .top-bar {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.user-actions .icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.user-actions .icon:hover {
+    color: #ccc;
+}
+
+.envio-gratis {
+    background-color: #333;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.85em;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <div class="logo">
+                <img src="img/b9f6495a-fd80-43f9-ac9a-b6d00949f73e.png" alt="QuillaStore Logo"> <!-- Cambia la ruta si es necesario -->
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="hombre.html">Hombre</a>
+                <a href="mujer.html">Mujer</a>
+                <a href="niño.html">Niños</a>
+                
+            </nav>
+            <div class="user-actions">
+                <a href="buscar.html" class="icon" title="Buscar"><span>🔍</span></a>
+                
+                <a href="carrito.html" class="icon" title="Carrito de Compras"><span>🛒</span></a>
+            </div>
+        </div>
+        <div class="envio-gratis">
+            Envío gratis por compras iguales o superiores a $300.000 en toda Colombia.
+        </div>
+    </header>
+    
+
+    <!-- Video Background Section -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="img/clideo_editor_e825a6a0d423420bbfc08d97225407cd.mp4" type="video/webm">
+            <!-- Añade un video que represente tu marca -->
+        </video>
+        <div class="header-content">
+            <h1>¡QuillaStore Ropa de Calidad!</h1>
+            <p>Estilo que Inspira</p>
+            <button onclick="window.location.href='login.html'">Ingresa</button>
+        </button>
+        </div>
+    </div>
+
+    <!-- Preferences Section -->
+    <section class="preferences">
+        <h2>Selecciona tu Preferencia</h2>
+        <div class="categories">
+            <div class="category">
+                <a href="hombre.html">
+                    <img src="https://cdn-images.farfetch-contents.com/23/38/95/14/23389514_53455266_1000.jpg" alt="Ropa para hombre">
+                    <p>Hombre</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="mujer.html">
+                    <img src="https://img.freepik.com/foto-gratis/retrato-modelo-elegante-joven-muchacha-ropa-casual-verano-sombrero-marron-maquillaje-natural-vidrios-aislados_158538-8562.jpg" alt="Ropa para mujer">
+                    <p>Mujer</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="niño.html">
+                    <img src="https://www.pngarts.com/files/4/Children-PNG-Photo.png" alt="Ropa para niños">
+                    <p>Niños</p>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 QuillaStore - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>
+
+
