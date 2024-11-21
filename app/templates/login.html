@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - QuillaStore</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('img/a7518c01-8ebe-4a3c-946b-0b0b6d3aac84.png') no-repeat center center/cover; /* Reemplaza por la ruta de tu portada */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login/Register container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Logo styles */
+        .form-container img.logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input fields */
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Buttons */
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .form-container button:hover {
+            background-color: #444;
+        }
+
+        /* Link to switch between forms */
+        .form-container a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Logo -->
+        <img src="{{ url_for('static', filename='img/b9f6495a-fd80-43f9-ac9a-b6d00949f73e.png') }}" alt="QuillaStore Logo" class="logo">
+
+        <!-- Login/Register Title -->
+        <h2>Iniciar Sesión</h2>
+
+        <!-- Login Form -->
+        <form action="{{ url_for('handle_login') }}" method="POST">
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <!-- Link to Register -->
+        <p>¿No tienes una cuenta? <a href="{{ url_for('register') }}">Regístrate aquí</a></p>
+    </div>
+</body>
+</html>

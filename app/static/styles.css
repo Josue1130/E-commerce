@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.categories {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.btn-secondary {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+.inspiration {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.inspiration-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.inspiration-item {
+    max-width: 400px;
+    text-align: left;
+}
+
+.inspiration-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.inspiration-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.opinions {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.opinions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.opinion {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.opinion p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.opinion h4 {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.register {
+    background-color: #f3f3f3;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.register-buttons {
+    margin-top: 20px;
+}
+
+.register-buttons .btn-primary, .register-buttons .btn-secondary {
+    margin: 5px;
+    padding: 10px 20px;
+}
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.menu a.sale {
+    color: red;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.user-actions .icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.user-actions .icon:hover {
+    color: #ccc;
+}
+
+.envio-gratis {
+    background-color: #333;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.85em;
+    color: #fff;
+}

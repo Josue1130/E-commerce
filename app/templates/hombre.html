@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hombre - QuillaStore</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #444;
+        }
+        .top-bar {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .top-bar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .user-actions .icon {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .user-actions .icon:hover {
+            color: #ccc;
+        }
+
+        .envio-gratis {
+            background-color: #333;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 0.85em;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="QuillaStore Logo">
+            </div>
+            <nav class="menu">
+                <a href="{{ url_for('index') }}">Inicio</a>
+                <a href="{{ url_for('hombre') }}">Hombre</a>
+                <a href="{{ url_for('mujer') }}">Mujer</a>
+                <a href="{{ url_for('nino') }}">Niños</a>
+                
+            </nav>
+         
+        </div>
+        <div class="envio-gratis">
+            Envío gratis por compras iguales o superiores a $300.000 en toda Colombia.
+        </div>
+    </header>
+    <div class="container">
+        <h1>Ropa para Hombre</h1>
+        <div class="products">
+            <div class="product">
+                <img src="img/camisa-hombre.jpg" alt="Camisa Hombre">
+                <h3>Camisa Casual</h3>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito(5, 'Camisa Casual', 30000)">Añadir al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="img/pantalon-hombre.jpg" alt="Pantalón Hombre">
+                <h3>Pantalón de Mezclilla</h3>
+                <p>$50.000</p>
+                <button onclick="agregarAlCarrito(6, 'Pantalón de Mezclilla', 50000)">Añadir al Carrito</button>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+    </div>
+
+  
+</body>
+</html>
