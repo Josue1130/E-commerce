@@ -68,6 +68,7 @@
         .product button:hover {
             background-color: #444;
         }
+
         .top-bar {
             background-color: #000;
             color: #fff;
@@ -134,33 +135,30 @@
                 <a href="{{ url_for('hombre') }}">Hombre</a>
                 <a href="{{ url_for('mujer') }}">Mujer</a>
                 <a href="{{ url_for('nino') }}">Niños</a>
-                
             </nav>
-         
         </div>
         <div class="envio-gratis">
             Envío gratis por compras iguales o superiores a $300.000 en toda Colombia.
         </div>
     </header>
+
     <div class="container">
         <h1>Ropa para Hombre</h1>
         <div class="products">
-            <div class="product">
-                <img src="img/camisa-hombre.jpg" alt="Camisa Hombre">
-                <h3>Camisa Casual</h3>
-                <p>$30.000</p>
-                <button onclick="agregarAlCarrito(5, 'Camisa Casual', 30000)">Añadir al Carrito</button>
-            </div>
-            <div class="product">
-                <img src="img/pantalon-hombre.jpg" alt="Pantalón Hombre">
-                <h3>Pantalón de Mezclilla</h3>
-                <p>$50.000</p>
-                <button onclick="agregarAlCarrito(6, 'Pantalón de Mezclilla', 50000)">Añadir al Carrito</button>
-            </div>
-            <!-- Agrega más productos aquí -->
+            {% for producto in productos %}
+                <div class="product">
+                    <img src="{{ url_for('static', filename='img/' + producto.imagen) }}" alt="{{ producto.nombre }}">
+                    <h3>{{ producto.nombre }}</h3>
+                    <p>${{ producto.precio }}</p>
+                    <a href="{{ url_for('agregar_al_carrito', id=producto.id) }}">
+                        <button>Añadir al Carrito</button>
+                    </a>
+                </div>
+            {% else %}
+                <p>No hay productos disponibles para mostrar.</p>
+            {% endfor %}
         </div>
     </div>
 
-  
 </body>
 </html>

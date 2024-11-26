@@ -81,20 +81,13 @@
 </head>
 <body>
     <div class="form-container">
-        <!-- Logo -->
         <img src="{{ url_for('static', filename='img/b9f6495a-fd80-43f9-ac9a-b6d00949f73e.png') }}" alt="QuillaStore Logo" class="logo">
-
-        <!-- Login/Register Title -->
         <h2>Iniciar Sesión</h2>
-
-        <!-- Login Form -->
-        <form action="{{ url_for('handle_login') }}" method="POST">
+        <form action="{{ url_for('login') }}" method="POST">
             <input type="email" name="email" placeholder="Correo Electrónico" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <button type="submit">Ingresar</button>
         </form>
-
-        <!-- Link to Register -->
         <p>¿No tienes una cuenta? <a href="{{ url_for('register') }}">Regístrate aquí</a></p>
     </div>
 </body>

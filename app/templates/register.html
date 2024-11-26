@@ -55,9 +55,9 @@
 </head>
 <body>
     <div class="form-container">
-        <img src="img/b9f6495a-fd80-43f9-ac9a-b6d00949f73e.png" alt="QuillaStore Logo" class="logo">
+        <img src="{{ url_for('static', filename='img/b9f6495a-fd80-43f9-ac9a-b6d00949f73e.png') }}" alt="QuillaStore Logo" class="logo">
         <h2>Crear Cuenta</h2>
-        <form id="registroForm">
+        <form action="{{ url_for('register') }}" method="POST">
             <div class="form-group">
                 <label for="nombres">Nombres</label>
                 <input type="text" id="nombres" name="nombres" required>
@@ -84,11 +84,7 @@
             </div>
             <button type="submit" class="submit-btn">Registrarse</button>
         </form>
-        <div class="login-link">
-            ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a>
-        </div>
+        <p>¿Ya tienes una cuenta? <a href="{{ url_for('login') }}">Inicia sesión aquí</a></p>
     </div>
-
-
 </body>
 </html>

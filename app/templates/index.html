@@ -172,39 +172,31 @@
     <header class="top-bar">
         <div class="top-bar-container">
             <div class="logo">
-                <!-- Usa url_for para cargar imágenes desde la carpeta static -->
                 <img src="{{ url_for('static', filename='img/logo.png') }}" alt="QuillaStore Logo">
             </div>
             <nav class="menu">
-                <!-- Usa url_for para enlazar las rutas definidas en Flask -->
                 <a href="{{ url_for('index') }}">Inicio</a>
                 <a href="{{ url_for('hombre') }}">Hombre</a>
                 <a href="{{ url_for('mujer') }}">Mujer</a>
                 <a href="{{ url_for('nino') }}">Niños</a>
-                <a href="{{ url_for('login') }}">login</a>
+                <a href="{{ url_for('login') }}">Login</a>
             </nav>
-         
         </div>
         <div class="envio-gratis">
             Envío gratis por compras iguales o superiores a $300.000 en toda Colombia.
         </div>
     </header>
 
-    <!-- Fondo de video -->
     <div class="video-container">
         <video autoplay muted loop>
-            <source src="static/video.mp4" type="video/webm">
-            <!-- Añade un video que represente tu marca -->
+            <source src="{{ url_for('static', filename='video/video.mp4') }}" type="video/mp4">
         </video>
         <div class="header-content">
             <h1>¡QuillaStore Ropa de Calidad!</h1>
             <p>Estilo que Inspira</p>
-            
-
         </div>
     </div>
 
-    <!-- Sección de preferencias -->
     <section class="preferences">
         <h2>Selecciona tu Preferencia</h2>
         <div class="categories">
@@ -229,7 +221,6 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
     <footer>
         <p>© 2024 QuillaStore - Todos los derechos reservados</p>
     </footer>
